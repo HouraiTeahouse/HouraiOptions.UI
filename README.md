@@ -45,11 +45,14 @@ The `OptionUIBuilder` component reads the OptionSystem's singleton instance's me
 // To create a custom control create a class that derives from AbstractOptionViewAttribute
 public class CustomControl : AbstractOptionViewAttribute {
 
-  // Implement the abstract method BuildUI. This constructs an individual 
+  // Implement the abstract method BuildUI. This constructs the view for an individual option.
   // Called only once to build the UI.
   // Params:
   //  optionInfo: The metadata of the option
-  //  element: The instantiated 
+  //  element: The UI element created for the option. An instantiated copy of the associated prefab.
+  //
+  // Note: Throwing an exception during this will break the building process.
+  //       The approiate way to handle failure is to destroy the element, and log the error.
   public override void BuildUI(OptionInfo optionInfo, GameObject element) {
     // Do something...
   }
