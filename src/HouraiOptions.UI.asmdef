@@ -1,0 +1,11 @@
+{
+    "name": "HouraiOptions.UI",
+    "references": [
+        "HouraiOptions",
+        "HouraiLib"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [
+        "macOSStandalone"
+    ]
+}
